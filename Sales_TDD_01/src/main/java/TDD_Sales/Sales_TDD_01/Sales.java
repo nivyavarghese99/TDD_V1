@@ -27,24 +27,6 @@ public int addItems(Items item,Items item1){
 }
 
 
-//public void getInitialQuantity(String ItemName){
-//	
-//for(int j=0;j<ItemNameandQuantity.size();j++){
-//		
-//		if(ItemName.equals(ItemNameandQuantity.get(j).getItemNumber())){
-//			
-//			originalQuantity=ItemNameandQuantity.get(j).getItemNumber();
-//			
-//						
-//		}
-//		
-//		
-//	}
-//	
-//			
-//	}
-
-
 public double totalpriceCalculation(String ItemName,int ItemNumber){
 	
 	double Total = 0.0;
@@ -56,11 +38,7 @@ public double totalpriceCalculation(String ItemName,int ItemNumber){
 		
 		if(ItemName.equals(itemlist.get(i).getItemName())){
 		Total= (ItemNumber*itemlist.get(i).getPrice());
-				
-//		ItemNumber=itemlist.get(i).getItemNumber();
-//		itemlist.get(i).setItemNumber(ItemNumber-1);
-		System.out.println("total:"+Total);
-						
+
 							
 		}
 		
@@ -78,39 +56,6 @@ public double totalpriceCalculation(String ItemName,int ItemNumber){
 	
 }
 
-public int ProductReturn(String ItemName){
-	
-	int ItemNumber;
-	int returnStatus = 0;
-	
-	System.out.println("Inside Book Return Method");
-	
-	for (int i=0; i<itemlist.size(); i++){
-		
-		System.out.println("Product Quantity"+itemlist.get(i).getItemNumber());
-		
-						
-		if(ItemName.equals(itemlist.get(i).getItemName())){
-						
-								
-			ItemNumber =itemlist.get(i).getItemNumber();
-				itemlist.get(i).setItemNumber(ItemNumber+1);
-				
-				returnStatus=1;
-								
-				break;
-			
-			}else{
-				
-				returnStatus=0;
-				
-			}
-				
-			
-		}
-	return returnStatus;
-		
-}
 
 
 @Override
@@ -125,16 +70,6 @@ public String toString(){
 	return TotalProducts;
 	
 }
-
-
-
-
-
-
-
-
-
-	
 
 }
 

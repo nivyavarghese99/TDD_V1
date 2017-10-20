@@ -14,10 +14,8 @@ public static void main(String[] args) {
 		System.out.println("\nEnter 0 Exit "
 				+"\nEnter 1 add Item to Storage"
 				+"\nEnter 2 to see the available product list"
-				+"\nEnter 3 to buy a product"
-				//+"\nEnter 4 return a product"
-				//+"\nEnter 5 to get total number of sales"
-				);
+				+"\nEnter 3 to buy a product");
+				
 
 		int answer = in.nextInt();
 		
@@ -38,8 +36,8 @@ public static void main(String[] args) {
 		case 3:
 			 buy();
 			break;
-		case 4:
-			ProductReturn();
+//		case 4:
+//			ProductReturn();
 			
 		}
 		
@@ -96,11 +94,10 @@ private static void buy() {
 System.out.println("\nEnter No of ItemNumber : ");
 
 ItemNumber=in.nextInt();
-//sal.getInitialQuantity(ItemName);
 
 	
 	price=sal.totalpriceCalculation(ItemName,ItemNumber);
-	System.out.println("calculated price"+price);
+
 	if(price!=0){
 	System.out.println("Your product details "+"\n ItemName : "+ItemName+"\n Quantity Requested : "+ItemNumber+"\nTotal Amount : "+price);
 	}else
@@ -110,28 +107,6 @@ ItemNumber=in.nextInt();
 	}
 	
 }
-private static void ProductReturn() {
-	
-	 String ItemName;
-	 int status;
-	 
-	System.out.println("\nEnter ItemName : ");
-	ItemName = in.next();
-	
-	//sal.getInitialQuantity(ItemName);
-	status=sal.ProductReturn(ItemName);
-	
-	if(status!=0){
-		
-   System.out.println("You returned product! Please Visit  Again ");
-	}else{
-		
-		System.out.println(" sorry can't return your item!");
-		
-	}
-				
-}
-
 
 }
 
