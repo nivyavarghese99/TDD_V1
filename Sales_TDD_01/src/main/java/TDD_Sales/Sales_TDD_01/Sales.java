@@ -7,14 +7,13 @@ import java.util.List;
 public class Sales {
 private List<Items> itemlist;
 final private List<Items> ItemNameandQuantity;
-//final private List<Items> ItemNameandQuantity;
+
 int ArrayListindexCounter=0;
-int originalQuantity = 0;
 
 public Sales(){
 	
 	itemlist = new ArrayList<Items>();
-	//This ArrayList is created to store the initial values of book Inventory.
+	
 	ItemNameandQuantity= new ArrayList<Items>();
 }
 
